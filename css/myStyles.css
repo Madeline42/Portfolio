@@ -1,0 +1,40 @@
+:root {
+  --img-width: 100px;
+  --img-height: 100px;
+  --text-max: 600px;
+}
+
+.text-box {
+  max-width: var(--text-max);
+}
+
+img.custom-size {
+  width: var(--img-width);
+  height: auto;
+  max-width: 100%;
+}
+
+.text-justify {
+  text-align: justify;
+  hyphens: auto;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-block: 3rem;
+}
+
+.feature--reverse {
+  flex-direction: row-reverse;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .feature,
+  .feature--reverse {
+    flex-direction: column;
+    text-align: left;
+  }
+}
